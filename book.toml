@@ -1,0 +1,6 @@
+[book]
+authors = ["helinyu"]
+language = "en"
+multilingual = false
+src = "src"
+title = "test mkdbook 11xx"
