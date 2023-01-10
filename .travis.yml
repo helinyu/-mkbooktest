@@ -14,3 +14,15 @@ before_script:
 
 script:
   - mdbook build && mdbook test # In case of custom book path: mdbook build path/to/mybook && mdbook test path/to/mybook
+
+deploy:
+  provider: pages
+  strategy: git
+  edge: true
+  cleanup: false
+  github-token: $GITHUB_TOKEN
+  local-dir: book # In case of custom book path: path/to/mybook/book
+  keep-history: false
+  on:
+    branch: main
+  target_branch: gh-pages
